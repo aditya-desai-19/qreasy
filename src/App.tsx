@@ -1,12 +1,12 @@
 import React, { lazy } from "react";
-const Navbar = lazy(() => import("./components/Navbar"));
-const MainBody = lazy(() => import("./components/MainBody"));
+const Navbar = lazy(() => import("./containers/Navbar"));
+const MainBody = lazy(() => import("./containers/MainBody"));
 
 const App = () => {
 	return (
-		<div className="flex flex-col justify-center">
+		<div>
 			<Navbar />
-			{/* <MainBody /> */}
+			<MainBody />
 		</div>
 	);
 };
