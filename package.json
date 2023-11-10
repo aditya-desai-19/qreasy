@@ -1,0 +1,25 @@
+{
+  "name": "react-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx parcel public/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aditya Desai",
+  "license": "ISC",
+  "dependencies": {
+    "@types/jest": "^29.5.8",
+    "@types/node": "^20.9.0",
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "parcel": "^2.10.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "process": "^0.11.10"
+  }
+}
