@@ -1,7 +1,14 @@
-import React from "react";
+import React, { lazy } from "react";
+const Navbar = lazy(() => import("./components/Navbar"));
+const MainBody = lazy(() => import("./components/MainBody"));
 
 const App = () => {
-	return <h1>Hello World</h1>;
+	return (
+		<div className="flex flex-col justify-center">
+			<Navbar />
+			{/* <MainBody /> */}
+		</div>
+	);
 };
 
 export default App;
