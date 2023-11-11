@@ -1,13 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import InputContainer from "./InputContainer";
 import { QRCodeSVG } from "qrcode.react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDownload } from "@fortawesome/free-solid-svg-icons";
-import { toPng } from "react-svg-to-image";
+import {
+	faDownload,
+	faArrowRotateLeft,
+} from "@fortawesome/free-solid-svg-icons";
+import html2canvas from "html2canvas";
 
 const MainBody = () => {
 	const [qr, setQr] = useState<boolean>(false);
 	const [inputValues, setInputValues] = useState<any>({});
+
+	const qrCodeRef = useRef(null);
 
 	const handleChange = (e: any) => {
 		const name = e.target.name;
@@ -22,22 +27,28 @@ const MainBody = () => {
 	};
 
 	const handleDownload = () => {
-		const canvas = document.getElementById("qrcode-gen");
-		const pngUrl = canvas
-			.toDataURL("image/png")
-			.replace("image/png", "image/octet-stream");
-		let downloadLink = document.createElement("a");
-		downloadLink.href = pngUrl;
-		downloadLink.download = `qrcode.png`;
-		document.body.appendChild(downloadLink);
-		downloadLink.click();
-		document.body.removeChild(downloadLink);
+		if (qrCodeRef.current) {
+			html2canvas(qrCodeRef.current).then((canvas) => {
+				const pngUrl = canvas
+					.toDataURL("image/png")
+					.replace("image/png", "image/octet-stream");
+				const downloadLink = document.createElement("a");
+				downloadLink.href = pngUrl;
+				downloadLink.download = "qrcode.png";
+				document.body.appendChild(downloadLink);
+				downloadLink.click();
+				document.body.removeChild(downloadLink);
+			});
+		}
+	};
 
-		// console.log("download");---=
+	const handleReset = () => {
+		setQr(false);
+		setInputValues({});
 	};
 
 	return (
-		<div className="w-1/3 border-2 border-gray-300 mx-auto my-2 text-center shadow-lg">
+		<div className="w-1/3 border-2 border-gray-300 mx-auto my-4 text-center shadow-lg">
 			<form
 				className="flex flex-col items-center my-2"
 				onSubmit={handleSubmit}
@@ -48,10 +59,12 @@ const MainBody = () => {
 						<input
 							type="url"
 							name="url"
+							value={inputValues.url}
 							className="p-2 border-2 border-gray-300 w-56 rounded-lg focus:outline-none focus:border-purple-300"
 							placeholder="Enter url..."
 							onChange={handleChange}
 							required
+							disabled={qr}
 						/>
 					}
 				/>
@@ -63,6 +76,8 @@ const MainBody = () => {
 							className="p-2 border-2 border-gray-300 w-56 rounded-lg focus:outline-none focus:border-purple-300"
 							onChange={handleChange}
 							required
+							value={inputValues.size}
+							disabled={qr}
 						>
 							<option value="" selected disabled hidden>
 								Select size...
@@ -82,21 +97,37 @@ const MainBody = () => {
 				</button>
 			</form>
 			{qr && (
-				<div className="flex flex-col items-center ease-in-out">
-					<QRCodeSVG
-						id="qrcode-gen"
-						value={inputValues.url}
-						size={inputValues.size}
-					/>
-					<button
-						className="my-4 p-2 bg-blue-600 rounded-lg text-white hover:bg-blue-700 w-36"
-						onClick={handleDownload}
+				<div>
+					<div
+						className="flex flex-col items-center ease-in-out"
+						ref={qrCodeRef}
 					>
-						<span className="mr-2">
-							<FontAwesomeIcon icon={faDownload} />
-						</span>
-						Download
-					</button>
+						<QRCodeSVG
+							id="qrcode-gen"
+							value={inputValues.url}
+							size={inputValues.size}
+						/>
+					</div>
+					<div className="flex justify-center">
+						<button
+							className="my-4 mx-2 p-2 bg-green-600 rounded-lg text-white hover:bg-green-700 w-36"
+							onClick={handleReset}
+						>
+							<span className="mr-2">
+								<FontAwesomeIcon icon={faArrowRotateLeft} />
+							</span>
+							Reset
+						</button>
+						<button
+							className="my-4 mx-2 p-2 bg-blue-600 rounded-lg text-white hover:bg-blue-700 w-36"
+							onClick={handleDownload}
+						>
+							<span className="mr-2">
+								<FontAwesomeIcon icon={faDownload} />
+							</span>
+							Download
+						</button>
+					</div>
 				</div>
 			)}
 		</div>
