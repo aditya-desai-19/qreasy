@@ -1,12 +1,12 @@
 import React, { lazy } from "react";
+import { Outlet } from "react-router-dom";
 const Navbar = lazy(() => import("./containers/Navbar"));
-const MainBody = lazy(() => import("./containers/MainBody"));
 
 const App = () => {
 	return (
-		<div>
+		<div className="h-screen w-screen bg-gray-100">
 			<Navbar />
-			<MainBody />
+			<Outlet />
 		</div>
 	);
 };

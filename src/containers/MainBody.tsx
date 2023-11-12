@@ -48,7 +48,7 @@ const MainBody = () => {
 	};
 
 	return (
-		<div className="w-1/3 border-2 border-gray-300 mx-auto my-4 text-center shadow-lg">
+		<div className="w-1/3 border-2 border-gray-300 mx-auto my-4 text-center shadow-lg bg-white">
 			<form
 				className="flex flex-col items-center my-2"
 				onSubmit={handleSubmit}
