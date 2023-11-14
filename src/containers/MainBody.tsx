@@ -99,7 +99,7 @@ const MainBody = () => {
 			{qr && (
 				<div>
 					<div
-						className="flex flex-col items-center ease-in-out"
+						className="flex flex-col items-center ease-in-out max-w-full max-h-full overflow-hidden m-2"
 						ref={qrCodeRef}
 					>
 						<QRCodeSVG
@@ -110,7 +110,7 @@ const MainBody = () => {
 					</div>
 					<div className="flex justify-center">
 						<button
-							className="my-4 mx-2 p-2 bg-green-600 rounded-lg text-white hover:bg-green-700 w-36"
+							className="my-4 mx-2 p-2 bg-green-600 rounded-lg text-white hover:bg-green-700 w-36 max-[376px]:w-24 max-[376px]:p-2 max-[376px]:text-sm"
 							onClick={handleReset}
 						>
 							<span className="mr-2">
@@ -119,7 +119,7 @@ const MainBody = () => {
 							Reset
 						</button>
 						<button
-							className="my-4 mx-2 p-2 bg-blue-600 rounded-lg text-white hover:bg-blue-700 w-36"
+							className="my-4 mx-2 p-2 bg-blue-600 rounded-lg text-white hover:bg-blue-700 w-36 max-[376px]:w-24 max-[376px]:p-1 max-[376px]:text-sm"
 							onClick={handleDownload}
 						>
 							<span className="mr-2">
