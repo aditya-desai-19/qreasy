@@ -13,11 +13,11 @@ const Home = () => {
 	};
 
 	return (
-		<div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
-			<p className="text-7xl text-gray-800 font-poppins my-4 font-bold md:text-4xl">
+		<div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center w-2/3">
+			<p className="lg:text-6xl text-gray-800 font-poppins my-4 font-bold md:text-4xl min-[375px]:text-2xl min-[320px]:text-xl">
 				Welcome to qreasy
 			</p>
-			<p className="text-5xl text-gray-800 font-poppins my-4 md:text-2xl">
+			<p className="lg:text-5xl text-gray-800 font-poppins my-4 md:text-2xl min-[375px]:text-lg">
 				get your qr in{" "}
 				<TypeWriter
 					text={home_text}
@@ -28,11 +28,11 @@ const Home = () => {
 			</p>
 			<button
 				type="button"
-				className="my-4 p-2 bg-purple-600 rounded-lg text-white hover:bg-purple-700 w-36 font-bold md: w-28"
+				className="my-4 p-2 bg-purple-600 rounded-2xl text-white hover:bg-purple-700 lg:w-36 font-bold md:w-32 max-[320px]:w-28 max-[320px]:text-sm"
 				onClick={handleRedirect}
 			>
 				Get started
-				<span className="mx-2">
+				<span className="mx-2 max-[320px]:mx-1">
 					<FontAwesomeIcon icon={faAngleRight} />
 				</span>
 			</button>

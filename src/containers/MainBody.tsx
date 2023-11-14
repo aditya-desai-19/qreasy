@@ -48,7 +48,7 @@ const MainBody = () => {
 	};
 
 	return (
-		<div className="w-1/3 border-2 border-gray-300 mx-auto my-4 text-center shadow-lg bg-white">
+		<div className="w-1/2 border-2 border-gray-300 mx-auto my-4 text-center shadow-lg bg-white max-[769px]:w-2/3">
 			<form
 				className="flex flex-col items-center my-2"
 				onSubmit={handleSubmit}
@@ -60,7 +60,7 @@ const MainBody = () => {
 							type="url"
 							name="url"
 							value={inputValues.url}
-							className="p-2 border-2 border-gray-300 w-56 rounded-lg focus:outline-none focus:border-purple-300"
+							className="p-2 border-2 border-gray-300 lg:w-72 rounded-lg focus:outline-none focus:border-purple-300 md:w-48 max-[426px]:w-48 "
 							placeholder="Enter url..."
 							onChange={handleChange}
 							required
@@ -73,7 +73,7 @@ const MainBody = () => {
 					inputElement={
 						<select
 							name="size"
-							className="p-2 border-2 border-gray-300 w-56 rounded-lg focus:outline-none focus:border-purple-300"
+							className="p-2 border-2 border-gray-300 lg:w-72 rounded-lg focus:outline-none focus:border-purple-300 md:w-48 max-[426px]:w-48"
 							onChange={handleChange}
 							required
 							value={inputValues.size}

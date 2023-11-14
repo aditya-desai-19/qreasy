@@ -8,7 +8,7 @@ interface InputProps {
 const InputContainer: React.FC<InputProps> = ({ label, inputElement }) => {
 	return (
 		<div className="my-2 w-full">
-			<label className="mx-4 inline-block text-right font-semibold text-lg text-gray-800 w-32">
+			<label className="mx-4 inline-block text-right font-semibold text-lg text-gray-800 w-32 lg:w-28 lg:mx-2 sm:w-24 max-[426px]:text-center">
 				{label}
 			</label>
 			{inputElement}
