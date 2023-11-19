@@ -6,15 +6,15 @@ const MainBody = lazy(() => import("../containers/MainBody"));
 
 const Routes = createBrowserRouter([
 	{
-		path: "/",
+		path: "/qreasy",
 		element: <App />,
 		children: [
 			{
-				path: "/",
+				path: "/qreasy",
 				element: <Home />,
 			},
 			{
-				path: "/generate-qr",
+				path: "/qreasy/generate-qr",
 				element: <MainBody />,
 			},
 		],

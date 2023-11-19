@@ -37,10 +37,10 @@ const Navbar = () => {
 			<div className="bg-primary-color h-12 flex justify-between items-center text-nav-text-color shadow-lg p-2 ">
 				<p className="text-2xl font-bold ml-10">qreasy</p>
 				<ul className="flex mr-10  max-[426px]:hidden">
-					<Link to={"/"}>
+					<Link to={"/qreasy"}>
 						<li className="mx-4 text-lg font-bold ">Home</li>
 					</Link>
-					<Link to={"/generate-qr"}>
+					<Link to={"/qreasy/generate-qr"}>
 						<li className="mx-4 text-lg font-bold ">Generate Qr</li>
 					</Link>
 					<li
@@ -62,12 +62,12 @@ const Navbar = () => {
 			{showMenu && (
 				<div className="bg-primary-color text-nav-text-color border-t-2 border-nav-text-color min-[426px]:hidden">
 					<ul className="flex flex-col">
-						<Link to={"/"} onClick={handleClick}>
+						<Link to={"/qreasy"} onClick={handleClick}>
 							<li className="ml-10 py-2 text-lg font-bold ">
 								Home
 							</li>
 						</Link>
-						<Link to={"/generate-qr"} onClick={handleClick}>
+						<Link to={"/qreasy/generate-qr"} onClick={handleClick}>
 							<li className="ml-10 py-2 text-lg font-bold ">
 								Generate Qr
 							</li>
