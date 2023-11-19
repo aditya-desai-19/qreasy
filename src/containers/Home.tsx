@@ -14,15 +14,15 @@ const Home = () => {
 
 	return (
 		<div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center w-2/3">
-			<p className="lg:text-7xl text-gray-800 font-poppins my-4 font-bold md:text-4xl min-[375px]:text-2xl min-[320px]:text-xl">
+			<p className="lg:text-7xl text-text-color font-poppins my-4 font-bold md:text-4xl min-[375px]:text-2xl min-[320px]:text-xl">
 				Welcome to qreasy
 			</p>
-			<p className="lg:text-5xl text-gray-800 font-poppins my-4 md:text-2xl min-[375px]:text-lg">
+			<p className="lg:text-5xl text-text-color font-poppins my-4 md:text-2xl min-[375px]:text-lg">
 				get your qr in{" "}
 				<TypeWriter
 					text={home_text}
 					delay={200}
-					className={"text-purple-800"}
+					className={"text-primary-color"}
 					infinite
 				/>
 			</p>
