@@ -661,7 +661,7 @@ const Navbar = ()=>{
                         className: "flex mr-10  max-[426px]:hidden",
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                                to: "/",
+                                to: "/qreasy",
                                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                                     className: "mx-4 text-lg font-bold ",
                                     children: "Home"
@@ -676,7 +676,7 @@ const Navbar = ()=>{
                                 columnNumber: 6
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                                to: "/generate-qr",
+                                to: "/qreasy/generate-qr",
                                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                                     className: "mx-4 text-lg font-bold ",
                                     children: "Generate Qr"
@@ -738,7 +738,7 @@ const Navbar = ()=>{
                     className: "flex flex-col",
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                            to: "/",
+                            to: "/qreasy",
                             onClick: handleClick,
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                                 className: "ml-10 py-2 text-lg font-bold ",
@@ -754,7 +754,7 @@ const Navbar = ()=>{
                             columnNumber: 7
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                            to: "/generate-qr",
+                            to: "/qreasy/generate-qr",
                             onClick: handleClick,
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                                 className: "ml-10 py-2 text-lg font-bold ",

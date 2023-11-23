@@ -2949,33 +2949,85 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 var _client = require("react-dom/client");
 var _clientDefault = parcelHelpers.interopDefault(_client);
 var _reactRouterDom = require("react-router-dom");
-var _route = require("./routes/Route");
-var _routeDefault = parcelHelpers.interopDefault(_route);
 var _indexCss = require("./index.css");
+const App = /*#__PURE__*/ (0, _react.lazy)(_c = ()=>require("9b34ed75fccc5ab3"));
+_c1 = App;
+const Home = /*#__PURE__*/ (0, _react.lazy)(_c2 = ()=>require("16411614b9393154"));
+_c3 = Home;
+const MainBody = /*#__PURE__*/ (0, _react.lazy)(_c4 = ()=>require("d2092d33f7a28df2"));
+_c5 = MainBody;
 const root = document.getElementById("root");
 (0, _clientDefault.default).createRoot(root).render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _react.Suspense), {
     fallback: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
         children: "Loading..."
     }, void 0, false, void 0, void 0),
-    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.RouterProvider), {
-        router: (0, _routeDefault.default)
+    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.HashRouter), {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Routes), {
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                path: "/",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(App, {}, void 0, false, void 0, void 0),
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                        path: "/",
+                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Home, {}, void 0, false, void 0, void 0)
+                    }, void 0, false, {
+                        fileName: "src/index.tsx",
+                        lineNumber: 15,
+                        columnNumber: 6
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                        path: "generate-qr",
+                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(MainBody, {}, void 0, false, void 0, void 0)
+                    }, void 0, false, {
+                        fileName: "src/index.tsx",
+                        lineNumber: 16,
+                        columnNumber: 6
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                        path: "*",
+                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                            children: "Some error occured!! Check url"
+                        }, void 0, false, void 0, void 0)
+                    }, void 0, false, {
+                        fileName: "src/index.tsx",
+                        lineNumber: 17,
+                        columnNumber: 6
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/index.tsx",
+                lineNumber: 14,
+                columnNumber: 5
+            }, undefined)
+        }, void 0, false, {
+            fileName: "src/index.tsx",
+            lineNumber: 13,
+            columnNumber: 4
+        }, undefined)
     }, void 0, false, {
         fileName: "src/index.tsx",
-        lineNumber: 10,
+        lineNumber: 12,
         columnNumber: 3
     }, undefined)
 }, void 0, false, {
     fileName: "src/index.tsx",
-    lineNumber: 9,
+    lineNumber: 11,
     columnNumber: 2
 }, undefined));
+var _c, _c1, _c2, _c3, _c4, _c5;
+$RefreshReg$(_c, "App$lazy");
+$RefreshReg$(_c1, "App");
+$RefreshReg$(_c2, "Home$lazy");
+$RefreshReg$(_c3, "Home");
+$RefreshReg$(_c4, "MainBody$lazy");
+$RefreshReg$(_c5, "MainBody");
 
   $parcel$ReactRefreshHelpers$2a8f.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","react-router-dom":"9xmpe","./routes/Route":"kA1Nq","./index.css":"irmnC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","react-router-dom":"9xmpe","./index.css":"irmnC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","9b34ed75fccc5ab3":"9QEVK","16411614b9393154":"7PScr","d2092d33f7a28df2":"dOA54"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -33451,202 +33503,7 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}],"kA1Nq":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$f319 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$f319.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _reactRouterDom = require("react-router-dom");
-const App = /*#__PURE__*/ (0, _react.lazy)(()=>require("a579f805ff4f3958"));
-_c = App;
-const Home = /*#__PURE__*/ (0, _react.lazy)(()=>require("c0a30aa306e50de2"));
-_c1 = Home;
-const MainBody = /*#__PURE__*/ (0, _react.lazy)(()=>require("8ff8144b80fefc3"));
-_c2 = MainBody;
-const Routes = (0, _reactRouterDom.createBrowserRouter)([
-    {
-        path: "/",
-        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(App, {}, void 0, false, {
-            fileName: "src/routes/Route.tsx",
-            lineNumber: 10,
-            columnNumber: 12
-        }, undefined),
-        children: [
-            {
-                path: "/",
-                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Home, {}, void 0, false, {
-                    fileName: "src/routes/Route.tsx",
-                    lineNumber: 14,
-                    columnNumber: 14
-                }, undefined)
-            },
-            {
-                path: "/generate-qr",
-                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(MainBody, {}, void 0, false, {
-                    fileName: "src/routes/Route.tsx",
-                    lineNumber: 18,
-                    columnNumber: 14
-                }, undefined)
-            }
-        ]
-    },
-    {
-        path: "*",
-        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-            children: "Some error occured!! Check path url.."
-        }, void 0, false, {
-            fileName: "src/routes/Route.tsx",
-            lineNumber: 24,
-            columnNumber: 12
-        }, undefined)
-    }
-]);
-exports.default = Routes;
-var _c, _c1, _c2;
-$RefreshReg$(_c, "App");
-$RefreshReg$(_c1, "Home");
-$RefreshReg$(_c2, "MainBody");
-
-  $parcel$ReactRefreshHelpers$f319.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","a579f805ff4f3958":"9QEVK","c0a30aa306e50de2":"7PScr","8ff8144b80fefc3":"dOA54","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9QEVK":[function(require,module,exports) {
-module.exports = require("1643a7c7d2d1ed10")(require("f5d2d1313d51e35b").getBundleURL("6EXJA") + "App.0513734e.js" + "?" + Date.now()).catch((err)=>{
-    delete module.bundle.cache[module.id];
-    throw err;
-}).then(()=>module.bundle.root("7F5Te"));
-
-},{"1643a7c7d2d1ed10":"61B45","f5d2d1313d51e35b":"lgJ39"}],"61B45":[function(require,module,exports) {
-"use strict";
-var cacheLoader = require("ca2a84f7fa4a3bb0");
-module.exports = cacheLoader(function(bundle) {
-    return new Promise(function(resolve, reject) {
-        // Don't insert the same script twice (e.g. if it was already in the HTML)
-        var existingScripts = document.getElementsByTagName("script");
-        if ([].concat(existingScripts).some(function isCurrentBundle(script) {
-            return script.src === bundle;
-        })) {
-            resolve();
-            return;
-        }
-        var preloadLink = document.createElement("link");
-        preloadLink.href = bundle;
-        preloadLink.rel = "preload";
-        preloadLink.as = "script";
-        document.head.appendChild(preloadLink);
-        var script = document.createElement("script");
-        script.async = true;
-        script.type = "text/javascript";
-        script.src = bundle;
-        script.onerror = function(e) {
-            var error = new TypeError("Failed to fetch dynamically imported module: ".concat(bundle, ". Error: ").concat(e.message));
-            script.onerror = script.onload = null;
-            script.remove();
-            reject(error);
-        };
-        script.onload = function() {
-            script.onerror = script.onload = null;
-            resolve();
-        };
-        document.getElementsByTagName("head")[0].appendChild(script);
-    });
-});
-
-},{"ca2a84f7fa4a3bb0":"j49pS"}],"j49pS":[function(require,module,exports) {
-"use strict";
-var cachedBundles = {};
-var cachedPreloads = {};
-var cachedPrefetches = {};
-function getCache(type) {
-    switch(type){
-        case "preload":
-            return cachedPreloads;
-        case "prefetch":
-            return cachedPrefetches;
-        default:
-            return cachedBundles;
-    }
-}
-module.exports = function(loader, type) {
-    return function(bundle) {
-        var cache = getCache(type);
-        if (cache[bundle]) return cache[bundle];
-        return cache[bundle] = loader.apply(null, arguments).catch(function(e) {
-            delete cache[bundle];
-            throw e;
-        });
-    };
-};
-
-},{}],"lgJ39":[function(require,module,exports) {
-"use strict";
-var bundleURL = {};
-function getBundleURLCached(id) {
-    var value = bundleURL[id];
-    if (!value) {
-        value = getBundleURL();
-        bundleURL[id] = value;
-    }
-    return value;
-}
-function getBundleURL() {
-    try {
-        throw new Error();
-    } catch (err) {
-        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
-        if (matches) // The first two stack frames will be this function and getBundleURLCached.
-        // Use the 3rd one, which will be a runtime in the original bundle.
-        return getBaseURL(matches[2]);
-    }
-    return "/";
-}
-function getBaseURL(url) {
-    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
-}
-// TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
-function getOrigin(url) {
-    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
-    if (!matches) throw new Error("Origin not found");
-    return matches[0];
-}
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-exports.getOrigin = getOrigin;
-
-},{}],"7PScr":[function(require,module,exports) {
-module.exports = Promise.all([
-    require("1dce28f4902ec6ce")(require("9690feda3f4cb9ea").getBundleURL("6EXJA") + "Navbar.055bdb15.js" + "?" + Date.now()).catch((err)=>{
-        delete module.bundle.cache[module.id];
-        throw err;
-    }),
-    require("1dce28f4902ec6ce")(require("9690feda3f4cb9ea").getBundleURL("6EXJA") + "Home.7f7c7f9a.js" + "?" + Date.now()).catch((err)=>{
-        delete module.bundle.cache[module.id];
-        throw err;
-    })
-]).then(()=>module.bundle.root("2wQZD"));
-
-},{"1dce28f4902ec6ce":"61B45","9690feda3f4cb9ea":"lgJ39"}],"dOA54":[function(require,module,exports) {
-module.exports = Promise.all([
-    require("eccbe3ef6757bc3a")(require("402d4d39e742254").getBundleURL("6EXJA") + "Navbar.055bdb15.js" + "?" + Date.now()).catch((err)=>{
-        delete module.bundle.cache[module.id];
-        throw err;
-    }),
-    require("eccbe3ef6757bc3a")(require("402d4d39e742254").getBundleURL("6EXJA") + "MainBody.23dc2490.js" + "?" + Date.now()).catch((err)=>{
-        delete module.bundle.cache[module.id];
-        throw err;
-    })
-]).then(()=>module.bundle.root("7NwfC"));
-
-},{"eccbe3ef6757bc3a":"61B45","402d4d39e742254":"lgJ39"}],"km3Ru":[function(require,module,exports) {
+},{}],"irmnC":[function() {},{}],"km3Ru":[function(require,module,exports) {
 "use strict";
 var Refresh = require("7422ead32dcc1e6b");
 function debounce(func, delay) {
@@ -33784,6 +33641,133 @@ function registerExportsForReactRefresh(module1) {
     }
 }
 
-},{"7422ead32dcc1e6b":"786KC"}],"irmnC":[function() {},{}]},["9p54t","1xC6H","4aBH6"], "4aBH6", "parcelRequire00c8")
+},{"7422ead32dcc1e6b":"786KC"}],"9QEVK":[function(require,module,exports) {
+module.exports = require("1643a7c7d2d1ed10")(require("f5d2d1313d51e35b").getBundleURL("6EXJA") + "App.0513734e.js" + "?" + Date.now()).catch((err)=>{
+    delete module.bundle.cache[module.id];
+    throw err;
+}).then(()=>module.bundle.root("7F5Te"));
+
+},{"1643a7c7d2d1ed10":"61B45","f5d2d1313d51e35b":"lgJ39"}],"61B45":[function(require,module,exports) {
+"use strict";
+var cacheLoader = require("ca2a84f7fa4a3bb0");
+module.exports = cacheLoader(function(bundle) {
+    return new Promise(function(resolve, reject) {
+        // Don't insert the same script twice (e.g. if it was already in the HTML)
+        var existingScripts = document.getElementsByTagName("script");
+        if ([].concat(existingScripts).some(function isCurrentBundle(script) {
+            return script.src === bundle;
+        })) {
+            resolve();
+            return;
+        }
+        var preloadLink = document.createElement("link");
+        preloadLink.href = bundle;
+        preloadLink.rel = "preload";
+        preloadLink.as = "script";
+        document.head.appendChild(preloadLink);
+        var script = document.createElement("script");
+        script.async = true;
+        script.type = "text/javascript";
+        script.src = bundle;
+        script.onerror = function(e) {
+            var error = new TypeError("Failed to fetch dynamically imported module: ".concat(bundle, ". Error: ").concat(e.message));
+            script.onerror = script.onload = null;
+            script.remove();
+            reject(error);
+        };
+        script.onload = function() {
+            script.onerror = script.onload = null;
+            resolve();
+        };
+        document.getElementsByTagName("head")[0].appendChild(script);
+    });
+});
+
+},{"ca2a84f7fa4a3bb0":"j49pS"}],"j49pS":[function(require,module,exports) {
+"use strict";
+var cachedBundles = {};
+var cachedPreloads = {};
+var cachedPrefetches = {};
+function getCache(type) {
+    switch(type){
+        case "preload":
+            return cachedPreloads;
+        case "prefetch":
+            return cachedPrefetches;
+        default:
+            return cachedBundles;
+    }
+}
+module.exports = function(loader, type) {
+    return function(bundle) {
+        var cache = getCache(type);
+        if (cache[bundle]) return cache[bundle];
+        return cache[bundle] = loader.apply(null, arguments).catch(function(e) {
+            delete cache[bundle];
+            throw e;
+        });
+    };
+};
+
+},{}],"lgJ39":[function(require,module,exports) {
+"use strict";
+var bundleURL = {};
+function getBundleURLCached(id) {
+    var value = bundleURL[id];
+    if (!value) {
+        value = getBundleURL();
+        bundleURL[id] = value;
+    }
+    return value;
+}
+function getBundleURL() {
+    try {
+        throw new Error();
+    } catch (err) {
+        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
+        if (matches) // The first two stack frames will be this function and getBundleURLCached.
+        // Use the 3rd one, which will be a runtime in the original bundle.
+        return getBaseURL(matches[2]);
+    }
+    return "/";
+}
+function getBaseURL(url) {
+    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
+}
+// TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
+function getOrigin(url) {
+    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
+    if (!matches) throw new Error("Origin not found");
+    return matches[0];
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+exports.getOrigin = getOrigin;
+
+},{}],"7PScr":[function(require,module,exports) {
+module.exports = Promise.all([
+    require("1dce28f4902ec6ce")(require("9690feda3f4cb9ea").getBundleURL("6EXJA") + "Navbar.055bdb15.js" + "?" + Date.now()).catch((err)=>{
+        delete module.bundle.cache[module.id];
+        throw err;
+    }),
+    require("1dce28f4902ec6ce")(require("9690feda3f4cb9ea").getBundleURL("6EXJA") + "Home.7f7c7f9a.js" + "?" + Date.now()).catch((err)=>{
+        delete module.bundle.cache[module.id];
+        throw err;
+    })
+]).then(()=>module.bundle.root("2wQZD"));
+
+},{"1dce28f4902ec6ce":"61B45","9690feda3f4cb9ea":"lgJ39"}],"dOA54":[function(require,module,exports) {
+module.exports = Promise.all([
+    require("eccbe3ef6757bc3a")(require("402d4d39e742254").getBundleURL("6EXJA") + "Navbar.055bdb15.js" + "?" + Date.now()).catch((err)=>{
+        delete module.bundle.cache[module.id];
+        throw err;
+    }),
+    require("eccbe3ef6757bc3a")(require("402d4d39e742254").getBundleURL("6EXJA") + "MainBody.23dc2490.js" + "?" + Date.now()).catch((err)=>{
+        delete module.bundle.cache[module.id];
+        throw err;
+    })
+]).then(()=>module.bundle.root("7NwfC"));
+
+},{"eccbe3ef6757bc3a":"61B45","402d4d39e742254":"lgJ39"}]},["9p54t","1xC6H","4aBH6"], "4aBH6", "parcelRequire00c8")
 
 //# sourceMappingURL=index.2d3ace14.js.map
